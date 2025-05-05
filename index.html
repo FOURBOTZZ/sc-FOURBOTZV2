@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Pembayaran</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      background-size: cover;
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: #fff;
+      user-select: none;
+      z-index: 9999;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% {transform: translateY(0) rotate(0deg); opacity: 1;}
+      100% {transform: translateY(100vh) rotate(360deg); opacity: 0;}
+    }
+  </style>
+</head>
+<body class="text-white font-sans relative">
+
+  <!-- Efek salju -->
+  <script>
+    for (let i = 0; i < 50; i++) {
+      const snowflake = document.createElement("div");
+      snowflake.className = "snowflake";
+      snowflake.style.left = Math.random() * 100 + "vw";
+      snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+      snowflake.style.animationDuration = Math.random() * 5 + 5 + "s";
+      snowflake.innerText = "❄";
+      document.body.appendChild(snowflake);
+    }
+  </script>
+
+  <div class="max-w-xl mx-auto mt-10 bg-white/90 backdrop-blur-md text-gray-900 rounded-2xl shadow-2xl p-6 relative z-10">
+    <h1 class="text-3xl font-bold mb-6 text-center text-blue-600">Website Pembayaran</h1>
+
+    <div class="flex justify-around mb-6">
+      <button onclick="showSection('payment')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full">Payment</button>
+      <button onclick="showSection('testimoni')" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full">Testimoni</button>
+      <button onclick="showSection('owner')" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full">Owner</button>
+    </div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Pembayaran</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      background-size: cover;
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: #fff;
+      user-select: none;
+      z-index: 9999;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% {transform: translateY(0) rotate(0deg); opacity: 1;}
+      100% {transform: translateY(100vh) rotate(360deg); opacity: 0;}
+    }
+  </style>
+</head>
+<body class="text-white font-sans relative">
+
+  <!-- Efek salju -->
+  <script>
+    for (let i = 0; i < 50; i++) {
+      const snowflake = document.createElement("div");
+      snowflake.className = "snowflake";
+      snowflake.style.left = Math.random() * 100 + "vw";
+      snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+      snowflake.style.animationDuration = Math.random() * 5 + 5 + "s";
+      snowflake.innerText = "❄";
+      document.body.appendChild(snowflake);
+    }
+  </script>
+
+  <div class="max-w-xl mx-auto mt-10 bg-white/90 backdrop-blur-md text-gray-900 rounded-2xl shadow-2xl p-6 relative z-10">
+    <h1 class="text-3xl font-bold mb-6 text-center text-blue-600">Website Pembayaran</h1>
+
+    <div class="flex justify-around mb-6">
+      <button onclick="showSection('payment')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full">Payment</button>
+      <button onclick="showSection('testimoni')" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full">Testimoni</button>
+      <button onclick="showSection('owner')" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full">Owner</button>
+    </div>
+
+    <!-- Section: Payment -->
+    <div id="payment" class="hidden">
+      <h2 class="text-xl font-semibold mb-4">Metode Pembayaran</h2>
+      <div class="space-y-5">
+        <!-- QRIS -->
+        <div class="flex items-center gap-4">
+          <i class="fas fa-qrcode text-2xl text-blue-600"></i>
+          <div>
+            <p class="font-medium">QRIS</p>
+            <img src="https://i.imgur.com/your_qris_image.jpg" alt="QRIS" class="w-40 border rounded" />
+          </div>
+        </div>
+
+        <!-- Dana -->
+        <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
+          <div class="flex items-center gap-3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/DANA_logo.svg" alt="Dana" class="w-6 h-6">
+            <span class="font-medium text-gray-800">Dana: 0812xxxxxxx</span>
+          </div>
+          <button onclick="copyText('0812xxxxxxx')" class="text-blue-600 hover:underline">Salin</button>
+        </div>
+
+        <!-- GoPay -->
+        <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
+          <div class="flex items-center gap-3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Gopay_logo.svg/1024px-Gopay_logo.svg.png" alt="GoPay" class="w-6 h-6">
+            <span class="font-medium text-gray-800">GoPay: 0812xxxxxxx</span>
+          </div>
+          <button onclick="copyText('0812xxxxxxx')" class="text-blue-600 hover:underline">Salin</button>
+        </div>
+
+        <!-- ShopeePay -->
+        <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
+          <div class="flex items-center gap-3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/ShopeePay_Logo.svg" alt="ShopeePay" class="w-6 h-6">
+            <span class="font-medium text-gray-800">ShopeePay: 0812xxxxxxx</span>
+          </div>
+          <button onclick="copyText('0812xxxxxxx')" class="text-blue-600 hover:underline">Salin</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Testimoni -->
+    <div id="testimoni" class="hidden mt-6">
+      <h2 class="text-xl font-semibold mb-4">Testimoni</h2>
+      <div class="space-y-3">
+        <blockquote class="bg-gray-100 p-3 rounded border-l-4 border-blue-500 italic">
+          "Pelayanan sangat cepat dan terpercaya!"<br><span class="font-semibold">- Andi</span>
+        </blockquote>
+        <blockquote class="bg-gray-100 p-3 rounded border-l-4 border-green-500 italic">
+          "Transaksi lancar dan aman."<br><span class="font-semibold">- Siti</span>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Section: Owner -->
+    <div id="owner" class="hidden mt-6">
+      <h2 class="text-xl font-semibold mb-4">Kontak Owner</h2>
+      <p><span class="font-medium">Nama:</span> Budi Santoso</p>
+      <p class="flex items-center gap-2 mt-2"><i class="fab fa-whatsapp text-green-500 text-xl"></i><a href="https://wa.me/6281234567890" class="text-blue-600 underline">Chat di WhatsApp</a></p>
+      <p><span class="font-medium">Email:</span> <a href="mailto:budi@email.com" class="text-blue-600 underline">budi@email.com</a></p>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('#payment, #testimoni, #owner').forEach(sec => sec.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+    }
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Nomor disalin: " + text);
+      });
+    }
+  </script>
+</body>
+</html>￼Enter
+    <!-- Section: Payment -->
+    <div id="payment" class="hidden">
+      <h2 class="text-xl font-semibold mb-4">Metode Pembayaran</h2>
+      <div class="space-y-5">
+        <!-- QRIS -->
+        <div class="flex items-center gap-4">
+          <i class="fas fa-qrcode text-2xl text-blue-600"></i>
+          <div>
+            <p class="font-medium">QRIS</p>
+            <img src="https://i.imgur.com/your_qris_image.jpg" alt="QRIS" class="w-40 border rounded" />
+          </div>
+        </div>
+
+        <!-- Dana -->
+        <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
+          <div class="flex items-center gap-3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/DANA_logo.svg" alt="Dana" class="w-6 h-6">
+            <span class="font-medium text-gray-800">Dana: 0812xxxxxxx</span>
+          </div>
+          <button onclick="copyText('0812xxxxxxx')" class="text-blue-600 hover:underline">Salin</button>
+        </div>
+
+        <!-- GoPay -->
+        <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
+          <div class="flex items-center gap-3">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Gopay_logo.svg/1024px-Gopay_logo.svg.png" alt="GoPay" class="w-6 h-6">
+            <span class="font-medium text-gray-800">GoPay: 0812xxxxxxx</span>
+          </div>
+          <button onclick="copyText('0812xxxxxxx')" class="text-blue-600 hover:underline">Salin</button>
+        </div>
+
+        <!-- ShopeePay -->
+        <div class="flex items-center justify-between bg-gray-100 p-3 rounded">
+          <div class="flex items-center gap-3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/ShopeePay_Logo.svg" alt="ShopeePay" class="w-6 h-6">
+            <span class="font-medium text-gray-800">ShopeePay: 0812xxxxxxx</span>
+          </div>
+          <button onclick="copyText('0812xxxxxxx')" class="text-blue-600 hover:underline">Salin</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Testimoni -->
+    <div id="testimoni" class="hidden mt-6">
+      <h2 class="text-xl font-semibold mb-4">Testimoni</h2>
+      <div class="space-y-3">
+        <blockquote class="bg-gray-100 p-3 rounded border-l-4 border-blue-500 italic">
+          "Pelayanan sangat cepat dan terpercaya!"<br><span class="font-semibold">- Andi</span>
+        </blockquote>
+        <blockquote class="bg-gray-100 p-3 rounded border-l-4 border-green-500 italic">
+          "Transaksi lancar dan aman."<br><span class="font-semibold">- Siti</span>
